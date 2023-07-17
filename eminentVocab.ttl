@@ -1,0 +1,103 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eminent: <https://www.w3id.org/intnet/eminent#:> .
+@base <https://www.w3id.org/intnet/eminent#:> .
+
+
+
+
+eminent:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Eminent Vocabulary"@en ;
+    skos:note "Vocabulary development"@en ;
+    skos:hasTopConcept  eminent:3a646883-ae72-4a7b-bebe-85d5812bc7ba ,
+                        eminent:0533b0f7-11b3-4e4d-b623-00c5c7238c96 ;
+    dc:contributor "Joep van Genuchten" ,
+                   "Jawad Kazmi"  ;  
+    .
+
+eminent:0533b0f7-11b3-4e4d-b623-00c5c7238c96
+    a skos:Concept ;
+    skos:prefLabel "Data Space"@en ;
+    skos:altLabel ""@en ;
+    skos:definition "The term ‘data space’ refers to a type of data relationship between trusted partners who adhere to the same high level standards and guidelines in relation to data storage and sharing within one or many Vertical Ecosystems."@en ;
+    skos:note "A data space is the sum of all its participants, which may be data providers, users and intermediaries. Data spaces can be nested and overlapping. For instance, a data provider can participate in several data spaces all at once."@en;
+    skos:narrower   eminent:d743959f-665f-449f-8764-802ed2812cf7 ,
+                    eminent:f7a08494-9457-462e-8025-18a9427ce9f1 ,
+                    eminent:e677010b-90ee-488d-a959-638ab559eb2c ;
+    skos:inScheme eminent: ;
+    .
+
+eminent:d743959f-665f-449f-8764-802ed2812cf7
+    a skos:Concept ;
+    skos:prefLabel "Data Sovereignty"@en ;
+    skos:definition "Data Sovereignty is about the degree to which data is being used in accordance to the policicies, requrements and restrictions imposed by the owners of the data."@en ;
+    skos:related eminent:e677010b-90ee-488d-a959-638ab559eb2c ;
+    skos:inScheme eminent: ;
+    .
+
+eminent:e677010b-90ee-488d-a959-638ab559eb2c
+    a skos:Concept ;
+    skos:prefLabel "Data Policy Enforcement"@en ;
+    skos:definition "Data policies are practices and agreements about how data is managed. "@en ;
+    skos:note "" ; 
+    skos:example ""@en ;
+    skos:related eminent:d743959f-665f-449f-8764-802ed2812cf7 ;
+    skos:inScheme eminent: ;
+    .
+
+eminent:f7a08494-9457-462e-8025-18a9427ce9f1
+    a skos:Concept ;
+    skos:prefLabel "Data Roles"@en ;
+    skos:altLabel "Business Data Ownership"@en ;
+    skos:definition "Data role models address how business ownership and other mandates around managing data are assigned."@en ;
+    skos:example ""@en ;
+    skos:related eminent:e677010b-90ee-488d-a959-638ab559eb2c ;
+    skos:inScheme eminent: ;
+    .
+
+eminent:3a646883-ae72-4a7b-bebe-85d5812bc7ba
+    a skos:Concept ;
+    skos:prefLabel "Information Security"@en ;
+    skos:altLabel ""@en ;
+    skos:definition ""@en ;
+    skos:example ""@en ;
+    skos:narrower   eminent:50dda654-18ad-4685-8860-acc845bf3463 ,
+                    eminent:9b1c4985-872c-4bdf-9472-42413e45048d ;
+    skos:inScheme <> ;
+    .
+
+eminent:50dda654-18ad-4685-8860-acc845bf3463
+    a skos:Concept ;
+    skos:prefLabel "Data Intergrity"@en ;
+    skos:definition "Data integrity refers to the requirement that data when represemnts the same and has the same intent as when it was recorded."@en ;
+    skos:note "Changes in formator corrections for data quality purposes do not constitute a loss of integrity because while the data has been changed the intent is the same"@en ;
+    skos:related eminent:9b1c4985-872c-4bdf-9472-42413e45048d ;
+    skos:inScheme eminent: ;
+    .
+
+eminent:9b1c4985-872c-4bdf-9472-42413e45048d
+    a skos:Concept ;
+    skos:prefLabel "Data Availability"@en ;
+    skos:altLabel ""@en ;
+    skos:definition "Data availability refers to the degree to which data is accessable to those who need it, when they need it."@en ;
+    skos:note "Data availabiltity is mostly influenced by system uptime and redundancy"@en ;
+    skos:related eminent:50dda654-18ad-4685-8860-acc845bf3463 ;
+    skos:inScheme eminent: ;
+    .
+
+
+
+
+
+
+
+
