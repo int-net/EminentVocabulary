@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Sheet1","startColumn":"B","endColumn":"B","startRow":"2","endRow":"+","comment":"","rule":"Individual: @C*(mm:Prefix\u003d\"eminent\" mm:Namespace\u003d \"http://eminent.intnet.eu/vocabulary#\" )\nTypes: skos:Concept\nAnnotations: skos:prefLabel @C*,\n\tskos:altLabel @D*,\n\tskos:definition @E*,\n\tskos:scopeNote @F*","active":true}]}
