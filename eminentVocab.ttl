@@ -9,13 +9,161 @@
 @prefix eminent: <http://eminent.intnet.eu/vocabulary#> .
 @base <http://eminent.intnet.eu/vocabulary#> .
 
-<http://eminent.intnet.eu/vocabulary#> rdf:type owl:Ontology, skos:ConceptScheme ;
-                                        owl:imports dcterms: ,
-                                                    <http://www.w3.org/2004/02/skos/core> .
+<http://eminent.intnet.eu/vocabulary#> rdf:type owl:Ontology ;
+                                        owl:imports <http://www.w3.org/2004/02/skos/core> .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/Box
+dcterms:Box rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO3166
+dcterms:ISO3166 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO639-2
+dcterms:ISO639-2 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO639-3
+dcterms:ISO639-3 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/Period
+dcterms:Period rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/Point
+dcterms:Point rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC1766
+dcterms:RFC1766 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC3066
+dcterms:RFC3066 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC4646
+dcterms:RFC4646 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC5646
+dcterms:RFC5646 rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/URI
+dcterms:URI rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/W3CDTF
+dcterms:W3CDTF rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Agent
+dcterms:Agent rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/AgentClass
+dcterms:AgentClass rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/BibliographicResource
+dcterms:BibliographicResource rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/FileFormat
+dcterms:FileFormat rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Frequency
+dcterms:Frequency rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Jurisdiction
+dcterms:Jurisdiction rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LicenseDocument
+dcterms:LicenseDocument rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+dcterms:LinguisticSystem rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Location
+dcterms:Location rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
+dcterms:LocationPeriodOrJurisdiction rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/MediaType
+dcterms:MediaType rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/MediaTypeOrExtent
+dcterms:MediaTypeOrExtent rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/MethodOfAccrual
+dcterms:MethodOfAccrual rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/MethodOfInstruction
+dcterms:MethodOfInstruction rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/PeriodOfTime
+dcterms:PeriodOfTime rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/PhysicalMedium
+dcterms:PhysicalMedium rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/PhysicalResource
+dcterms:PhysicalResource rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Policy
+dcterms:Policy rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/ProvenanceStatement
+dcterms:ProvenanceStatement rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+dcterms:RightsStatement rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/SizeOrDuration
+dcterms:SizeOrDuration rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Standard
+dcterms:Standard rdf:type owl:Class .
+
 
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://eminent.intnet.eu/vocabulary#
+<http://eminent.intnet.eu/vocabulary#> rdf:type owl:NamedIndividual ,
+                                                skos:ConceptScheme .
+
 
 ###  http://eminent.intnet.eu/vocabulary#a02ca9a4_7c5e_4ae7_aaba_2798950f3762
 eminent:a02ca9a4_7c5e_4ae7_aaba_2798950f3762 rdf:type owl:NamedIndividual ,
@@ -55,7 +203,7 @@ eminent:b99b7b63_dddb_47e5_a215_3034d4d75d41 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#c37aa227_44a2_4c11_8507_e4d28267c7ab
 eminent:c37aa227_44a2_4c11_8507_e4d28267c7ab rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:topConceptOf : ;          
+                                             skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                              skos:definition "A group of iorganizations and individuals tha (should) work together to realize interoperability in the context of a certain usecase."@en ;
                                              skos:prefLabel "Community"@en .
 
@@ -63,7 +211,7 @@ eminent:c37aa227_44a2_4c11_8507_e4d28267c7ab rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#c5d4fe14_ee57_4b00_99fb_1e3f98e89c05
 eminent:c5d4fe14_ee57_4b00_99fb_1e3f98e89c05 rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:topConceptOf : ;   
+                                             skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                              skos:definition "Testing is the process which is used to identify characteristics or problems of a product, service or system."@en ;
                                              skos:prefLabel "Testing"@en ;
                                              skos:scopeNote "Testing is often carried out by dedicated test facilities that provide the expertise and infrastructure required for performing tests."@en .
@@ -89,11 +237,11 @@ eminent:d95356d2_49eb_4436_a7c5_fae01b48f8d2 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#dfe4dfda_6d42_4274_ab03_29f583468dc9
 eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:topConceptOf : ;            
                                              skos:narrower eminent:b99b7b63_dddb_47e5_a215_3034d4d75d41 ,
                                                            eminent:e68e8760_25e8_45e4_af76_dfdf9cff0f75 ,
                                                            <http://eminent.intnet.eu/vocabulary#1574ed35_24c3_4dc2_b6ba_7a85f7ea5630> ,
                                                            <http://eminent.intnet.eu/vocabulary#9bcd5305_1500_43c6_bdff_3d8c21c4f101> ;
+                                             skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                              skos:definition "A model to compare an organization or communities maturity to in the context of a specific domain"@en ;
                                              skos:prefLabel "Maturity Model"@en ;
                                              skos:scopeNote "In the context of int:net, the maturity is aimed at measuring a communities (or industries) maturity when it comes to interoperability."@en .
@@ -102,7 +250,9 @@ eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#e550a9ec_f846_44af_92e1_f0f86131f448
 eminent:e550a9ec_f846_44af_92e1_f0f86131f448 rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:topConceptOf : ;            
+                                             skos:narrower eminent:d2ba4708_4a59_4225_8dc5_307da0add88a ,
+                                                           <http://eminent.intnet.eu/vocabulary#23153956_61c8_4748_acef_4a1e192a45b4> ;
+                                             skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                              dcterms:contributor "OFFIS" ;
                                              skos:definition "Documentation represents an essential point to ensure a common understanding of the community"@en ;
                                              skos:prefLabel "Documentation"@en ;
@@ -157,7 +307,9 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#23153956_61c8_4748_acef_4a1e192a45b4
 <http://eminent.intnet.eu/vocabulary#23153956_61c8_4748_acef_4a1e192a45b4> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
-                                                                           skos:related eminent:e550a9ec_f846_44af_92e1_f0f86131f448 ;
+                                                                           skos:broader eminent:e550a9ec_f846_44af_92e1_f0f86131f448 ;
+                                                                           skos:narrower <http://eminent.intnet.eu/vocabulary#23153956_61c8_4748_acef_4a1e192a45b4> ,
+                                                                                         <http://eminent.intnet.eu/vocabulary#5b64eeef_d3c4_4ee3_91fa_b45d37c09037> ;
                                                                            dcterms:contributor "OFFIS" ;
                                                                            skos:definition "Architecture, refers to the conceptual framework that defines the structure, components, and relationships of a system or domain, enabling the integration and interaction of various elements to achieve desired outcomes."@en ;
                                                                            skos:prefLabel "Architecture"@en .
@@ -196,7 +348,7 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#6b8a3625_1fa9_4396_a757_7e896b3acf9e
 <http://eminent.intnet.eu/vocabulary#6b8a3625_1fa9_4396_a757_7e896b3acf9e> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
-                                                                           skos:topConceptOf : ;            
+                                                                           skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                                                            dcterms:contributor "EPRI" ;
                                                                            skos:definition "The term ‘data space’ refers to a type of data relationship between trusted partners who adhere to the same high level standards and guidelines in relation to data storage and sharing within one or many Vertical Ecosystems."@en ;
                                                                            skos:prefLabel "Data Space"@en ;
@@ -213,7 +365,7 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
 <http://eminent.intnet.eu/vocabulary#6561e6d3_7af9_4f6a_88e9_bfae1125a547> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
                                                                            skos:related eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ;
-                                                                           skos:topConceptOf : ;   
+                                                                           skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                                                            dcterms:contributor "EPRI" ;
                                                                            skos:definition "The excersize of comparing an organizations or communities maturity to a maturity model to determine overal performance comapared to peers and identify areas of improvement."@en ;
                                                                            skos:prefLabel "Maturity Assessment"@en .
@@ -228,21 +380,21 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#79a8c9db_8a04_4c68_87f8_c007becbc4fe
 <http://eminent.intnet.eu/vocabulary#79a8c9db_8a04_4c68_87f8_c007becbc4fe> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
-                                                                           skos:topConceptOf : ;            
                                                                            skos:narrower eminent:b2a3426f_7139_4db2_b9f5_b4b3cb2d3c8d ,
                                                                                          <http://eminent.intnet.eu/vocabulary#1dd1930a_870a_4d0a_a89c_d634eb63eb8e> ;
+                                                                           skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                                                            skos:prefLabel "Information Security"@en .
 
 
 ###  http://eminent.intnet.eu/vocabulary#8eadbfea_138f_4007_b87e_da970d65b7f9
 <http://eminent.intnet.eu/vocabulary#8eadbfea_138f_4007_b87e_da970d65b7f9> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
-                                                                           skos:topConceptOf : ;            
                                                                            skos:narrower eminent:a02ca9a4_7c5e_4ae7_aaba_2798950f3762 ,
                                                                                          eminent:d95356d2_49eb_4436_a7c5_fae01b48f8d2 ,
                                                                                          eminent:e59f1dac_3d34_45b4_b3f2_45c0f91185c7 ,
                                                                                          <http://eminent.intnet.eu/vocabulary#4a2da955_112a_4ff3_8bb3_5c02005f8e08> ,
                                                                                          <http://eminent.intnet.eu/vocabulary#996258f0_4252_4478_8610_762aafa4c8a6> ;
+                                                                           skos:topConceptOf <http://eminent.intnet.eu/vocabulary#> ;
                                                                            dcterms:contributor "OFFIS" ;
                                                                            skos:definition "An interoperability layer refers to a distinct level or component within a system architecture that facilitates the seamless exchange of information and functionality between different interconnected systems or components."@en ;
                                                                            skos:prefLabel "Interoperability Layer"@en .
@@ -283,5 +435,6 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
                                                                            skos:definition "The emphasis of the communication layer is to describe protocols and mechanisms for the interoperable exchange of information between components in the context of the underlying use case, function or service and related information objects or data models."@en ;
                                                                            skos:prefLabel "Communication Layer"@en ;
                                                                            skos:scopeNote "According to the SGAM User Manual (https://www.cencenelec.eu/media/CEN-CENELEC/AreasOfWork/CEN-CENELEC_Topics/Smart%20Grids%20and%20Meters/Smart%20Grids/4_sgcg_methodology_sgamusermanual.pdf)"@en .
+
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
