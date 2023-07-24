@@ -10,7 +10,13 @@
 @base <http://eminent.intnet.eu/vocabulary#> .
 
 <http://eminent.intnet.eu/vocabulary#> rdf:type owl:Ontology ;
-                                        owl:imports <http://www.w3.org/2004/02/skos/core> .
+                                        owl:imports <http://www.w3.org/2004/02/skos/core> ;
+                                        dcterms:creator "AIT" ,
+                                                        "EPRI" ,
+                                                        "OFFIS" ;
+                                        rdfs:comment """This vocabulary was created in the context of the int:net Horizon project to document the  
+concepts used in the Eminent Maturity model.""" ;
+                                        skos:prefLabel "Eminent Vocabulary" .
 
 #################################################################
 #    Datatypes
@@ -194,7 +200,8 @@ eminent:b4fe6283_38d3_44e5_afb5_7572c386efaa rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#b99b7b63_dddb_47e5_a215_3034d4d75d41
 eminent:b99b7b63_dddb_47e5_a215_3034d4d75d41 rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:related eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ;
+                                             skos:broader eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ,
+                                                          <http://eminent.intnet.eu/vocabulary#9bcd5305_1500_43c6_bdff_3d8c21c4f101> ;
                                              dcterms:contributor "EPRI" ;
                                              skos:definition "Typically a capability or aspect of maturity in a specific category."@en ;
                                              skos:prefLabel "Dimension"@en .
@@ -272,7 +279,8 @@ eminent:e59f1dac_3d34_45b4_b3f2_45c0f91185c7 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#e68e8760_25e8_45e4_af76_dfdf9cff0f75
 eminent:e68e8760_25e8_45e4_af76_dfdf9cff0f75 rdf:type owl:NamedIndividual ,
                                                       skos:Concept ;
-                                             skos:related eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ;
+                                             skos:broader eminent:b99b7b63_dddb_47e5_a215_3034d4d75d41 ,
+                                                          eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ;
                                              dcterms:contributor "EPRI" ;
                                              skos:definition "A condition that when it's met implies something about the maturity of the subject of study in the related dimension."@en ;
                                              skos:prefLabel "Characteristic"@en .
@@ -412,6 +420,7 @@ eminent:ee9e324f_9439_453f_a3da_326e43f4d8a3 rdf:type owl:NamedIndividual ,
 ###  http://eminent.intnet.eu/vocabulary#9bcd5305_1500_43c6_bdff_3d8c21c4f101
 <http://eminent.intnet.eu/vocabulary#9bcd5305_1500_43c6_bdff_3d8c21c4f101> rdf:type owl:NamedIndividual ,
                                                                                     skos:Concept ;
+                                                                           skos:broader eminent:dfe4dfda_6d42_4274_ab03_29f583468dc9 ;
                                                                            dcterms:contributor "EPRI" ;
                                                                            skos:definition "A grouping of dimensions that together describe a broader aspect of (organizational) maturity."@en ;
                                                                            skos:prefLabel "Category"@en .
