@@ -11,3 +11,9 @@ BEWARE: at this stage, the protege import function will genereate its own uri's,
 
 tbd.
 
+
+1) create excel file
+2) open cellfie tab
+3) load excel file
+4) load transformation rules
+5) select import in current ontology
