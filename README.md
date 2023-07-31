@@ -7,3 +7,7 @@ exceltoskos.json contains the transformation rules for the [cellfie](https://git
 
 BEWARE: at this stage, the protege import function will genereate its own uri's, so please ONLY import excel files that contain new entries. If you wish to edit existing concepts, please do so directly in the ttl file (using a text editor, protege or any other linked data editing tool).
 
+## Instructions to transform from excel to skos (ttl)
+
+tbd.
+
