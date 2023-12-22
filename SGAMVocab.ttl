@@ -1,0 +1,179 @@
+@prefix : <http://sgam.intnet.eu/vocabulary#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sgam: <http://sgam.intnet.eu/vocabulary#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://sgam.intnet.eu/vocabulary#> .
+
+<http://sgam.intnet.eu/vocabulary#> rdf:type owl:Ontology ;
+                                     owl:imports <http://www.w3.org/2004/02/skos/core> ;
+                                     skos:prefLabel "Smart Grid Architectural Model Conrtolled Vocabulary"@en .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://sgam.intnet.eu/vocabulary#
+<http://sgam.intnet.eu/vocabulary#> rdf:type owl:NamedIndividual ,
+                                             skos:Collection ;
+                                    skos:hasTopConcept <http://sgam.intnet.eu/vocabulary#0dd73034_406a_4a0f_beba_b3bb644193f6> ,
+                                                       <http://sgam.intnet.eu/vocabulary#32475b2c_cbf3_4dc8_83ed_174dd0ccabd9> .
+
+
+###  http://sgam.intnet.eu/vocabulary#aa48ebe0_f19a_4ab1_a74c_669de6bc4e8f
+sgam:aa48ebe0_f19a_4ab1_a74c_669de6bc4e8f rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Station"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#aeb7b3b1_d7b1_438c_8e96_4bb9b71614e4
+sgam:aeb7b3b1_d7b1_438c_8e96_4bb9b71614e4 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Generation"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#b072020e_f3a7_4084_9128_287f88ded458
+sgam:b072020e_f3a7_4084_9128_287f88ded458 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Business Layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#b695d282_7aff_403e_b8f7_11064647abef
+sgam:b695d282_7aff_403e_b8f7_11064647abef rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Process"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#bf3f07f3_3d02_4997_a0c5_ebffa5806d07
+sgam:bf3f07f3_3d02_4997_a0c5_ebffa5806d07 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:narrower sgam:aa48ebe0_f19a_4ab1_a74c_669de6bc4e8f ,
+                                                        sgam:b695d282_7aff_403e_b8f7_11064647abef ,
+                                                        sgam:d02ec922_487a_4cbc_b1b2_af488c6da9c6 ,
+                                                        <http://sgam.intnet.eu/vocabulary#4efb1004_d529_422d_9f84_e2d62dd13d6f> ,
+                                                        <http://sgam.intnet.eu/vocabulary#569408eb_4047_4ab2_887c_d9f6118721a3> ,
+                                                        <http://sgam.intnet.eu/vocabulary#662a9bdc_de33_457a_b00a_b800ee399d09> ;
+                                          skos:prefLabel "Interoperability Zone"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#c4ec09f0_9579_4ee1_9380_f87eb70f9a26
+sgam:c4ec09f0_9579_4ee1_9380_f87eb70f9a26 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Regulatory Layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#d02ec922_487a_4cbc_b1b2_af488c6da9c6
+sgam:d02ec922_487a_4cbc_b1b2_af488c6da9c6 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Field"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#d796e221_39be_4d80_a375_96bccf46b3ed
+sgam:d796e221_39be_4d80_a375_96bccf46b3ed rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Customer Premises"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#d7b56774_bbd5_4aed_8557_27adf97b1ef2
+sgam:d7b56774_bbd5_4aed_8557_27adf97b1ef2 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Transmission"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#e201a83a_446c_495c_9cf2_617a45c8a1f3
+sgam:e201a83a_446c_495c_9cf2_617a45c8a1f3 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Distributed Energy Resources"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#e61b9668_d9b2_4020_9e6b_8da356db31d5
+sgam:e61b9668_d9b2_4020_9e6b_8da356db31d5 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Protocol Layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#eccb1178_a8cc_411e_82ba_4238dbc4dac9
+sgam:eccb1178_a8cc_411e_82ba_4238dbc4dac9 rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Information layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#f96d3c89_11c5_4b21_8c91_c8a5712fd8bf
+sgam:f96d3c89_11c5_4b21_8c91_c8a5712fd8bf rdf:type owl:NamedIndividual ,
+                                                   skos:Concept ;
+                                          skos:prefLabel "Distribution"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#0dd73034_406a_4a0f_beba_b3bb644193f6
+<http://sgam.intnet.eu/vocabulary#0dd73034_406a_4a0f_beba_b3bb644193f6> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:narrower sgam:bf3f07f3_3d02_4997_a0c5_ebffa5806d07 ,
+                                                                                      <http://sgam.intnet.eu/vocabulary#3a2f0331_bee8_4569_b111_35ce492570f9> ,
+                                                                                      <http://sgam.intnet.eu/vocabulary#4e318b9d_ad8c_4b3a_9f47_2725ccf39fe0> ;
+                                                                        skos:related <http://sgam.intnet.eu/vocabulary#32475b2c_cbf3_4dc8_83ed_174dd0ccabd9> ;
+                                                                        skos:prefLabel "Smart Grid Architectural Model"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#05d4dd4e_cb10_405b_845e_3583b6a3cfe9
+<http://sgam.intnet.eu/vocabulary#05d4dd4e_cb10_405b_845e_3583b6a3cfe9> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Component Layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#3a2f0331_bee8_4569_b111_35ce492570f9
+<http://sgam.intnet.eu/vocabulary#3a2f0331_bee8_4569_b111_35ce492570f9> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:narrower sgam:b072020e_f3a7_4084_9128_287f88ded458 ,
+                                                                                      sgam:c4ec09f0_9579_4ee1_9380_f87eb70f9a26 ,
+                                                                                      sgam:e61b9668_d9b2_4020_9e6b_8da356db31d5 ,
+                                                                                      sgam:eccb1178_a8cc_411e_82ba_4238dbc4dac9 ,
+                                                                                      <http://sgam.intnet.eu/vocabulary#05d4dd4e_cb10_405b_845e_3583b6a3cfe9> ,
+                                                                                      <http://sgam.intnet.eu/vocabulary#97cbe26b_2199_4995_96fb_9d6ba22afdac> ;
+                                                                        skos:prefLabel "Interoperability Layer"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#32475b2c_cbf3_4dc8_83ed_174dd0ccabd9
+<http://sgam.intnet.eu/vocabulary#32475b2c_cbf3_4dc8_83ed_174dd0ccabd9> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Interoperability"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#4e318b9d_ad8c_4b3a_9f47_2725ccf39fe0
+<http://sgam.intnet.eu/vocabulary#4e318b9d_ad8c_4b3a_9f47_2725ccf39fe0> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:narrower sgam:aeb7b3b1_d7b1_438c_8e96_4bb9b71614e4 ,
+                                                                                      sgam:d796e221_39be_4d80_a375_96bccf46b3ed ,
+                                                                                      sgam:d7b56774_bbd5_4aed_8557_27adf97b1ef2 ,
+                                                                                      sgam:e201a83a_446c_495c_9cf2_617a45c8a1f3 ,
+                                                                                      sgam:f96d3c89_11c5_4b21_8c91_c8a5712fd8bf ;
+                                                                        skos:prefLabel "Interoperability Domain"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#4efb1004_d529_422d_9f84_e2d62dd13d6f
+<http://sgam.intnet.eu/vocabulary#4efb1004_d529_422d_9f84_e2d62dd13d6f> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Market"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#569408eb_4047_4ab2_887c_d9f6118721a3
+<http://sgam.intnet.eu/vocabulary#569408eb_4047_4ab2_887c_d9f6118721a3> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Operation"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#662a9bdc_de33_457a_b00a_b800ee399d09
+<http://sgam.intnet.eu/vocabulary#662a9bdc_de33_457a_b00a_b800ee399d09> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Enterprise"@en .
+
+
+###  http://sgam.intnet.eu/vocabulary#97cbe26b_2199_4995_96fb_9d6ba22afdac
+<http://sgam.intnet.eu/vocabulary#97cbe26b_2199_4995_96fb_9d6ba22afdac> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:prefLabel "Function Layer"@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
